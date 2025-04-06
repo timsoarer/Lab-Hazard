@@ -24,7 +24,6 @@ public class EnemyMutant : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= lungeDelay)
         {
-            Debug.Log("Executed!");
             timer = 0.0f;
             Vector2 destination;
             if ((ai.GetPlayerPosition() - ai.GetPosition2D()).magnitude > lungeDistance)

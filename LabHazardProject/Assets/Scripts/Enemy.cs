@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         SetMoveDestination(Vector2.zero);
+        gameObject.tag = "Enemy";
     }
 
     void FixedUpdate()
@@ -31,11 +32,9 @@ public class Enemy : MonoBehaviour
         {
             Vector2 direction = (moveDestination - GetPosition2D()).normalized;
             rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
-            Debug.Log("Still moving!");
         }
         else
         {
-            Debug.Log("Stopped!");
             isMoving = false;
         }
     }
@@ -59,8 +58,6 @@ public class Enemy : MonoBehaviour
 
     public Vector2 GetPlayerPosition()
     {
-        Debug.Log(player.name);
-        Debug.Log(player.transform.position);
         return player.transform.position;
     }
 }
