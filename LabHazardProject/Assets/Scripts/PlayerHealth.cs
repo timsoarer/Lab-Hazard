@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(int damageValue = 1)
     {
         hp -= damageValue;
-        AudioSource.PlayClipAtPoint(hurtAudio, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(hurtAudio, Camera.main.transform.position + Vector3.forward*3);
         Debug.Log("Playing audio!");
         if (hp <= 0)
         {

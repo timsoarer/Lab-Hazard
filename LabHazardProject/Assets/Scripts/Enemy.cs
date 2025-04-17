@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private AudioClip hurtAudio;
     [SerializeField]
-    private bool contactDamage = true;
+    private bool doesContactDamage = true;
 
     void Start()
     {
@@ -86,10 +86,19 @@ public class Enemy : MonoBehaviour
     public void Damage(int damageValue = 1)
     {
         hp -= damageValue;
-        AudioSource.PlayClipAtPoint(hurtAudio, new Vector3(transform.position.x, transform.position.y, -10f));
+        AudioSource.PlayClipAtPoint(hurtAudio, new Vector3(transform.position.x, transform.position.y, -7f));
         if (hp <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (doesContactDamage && col.collider.tag == "Player")
+        {
+            player.GetComponent<PlayerHealth>().Damage();
+            // ADD CONTACT DAMAGE COOLDOWN, SO THE ZOMBIE CAN'T ATTACK MULTIPLE TIMES IN QUICK SUCCESSION!!!!
         }
     }
 }
