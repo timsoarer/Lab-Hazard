@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,15 +34,18 @@ public class Projectile : MonoBehaviour
 
     private Light2D light2d;
     private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
+    protected float travelAngle = 0f;
+    protected Vector2 travelDirection;
 
-    void Start()
+    void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         light2d = GetComponent<Light2D>();
         gameObject.tag = "Projectile";
         ChangeProjectileSide(ProjectileSide.Neutral);
+        travelDirection = AngleToDirection(travelAngle);
         Init();
     }
 
@@ -107,6 +111,17 @@ public class Projectile : MonoBehaviour
                 interactWithEnemies = true;
                 break;
         }
+    }
+
+    public float GetTravelAngle()
+    {
+        return travelAngle;
+    }
+
+    public void SetTravelAngle(float newAngle)
+    {
+        travelAngle = newAngle;
+        travelDirection = AngleToDirection(travelAngle);
     } 
 
     // Code that runs when the projectile hits a player. Can be overriden.
@@ -132,12 +147,17 @@ public class Projectile : MonoBehaviour
     // Determines the movement of the projectile. Runs every FixedUpdate(). Can be overrriden.
     public virtual void Move()
     {
-        rb.velocity = new Vector2(0f, 1f);
+        rb.velocity = travelDirection;
     }
 
     // Initializes any additional variables. Runs during Start() after all the default variables have been initialized.
     public virtual void Init()
     {
 
+    }
+
+    private Vector2 AngleToDirection(float angle)
+    {
+        return new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
     }
 }
