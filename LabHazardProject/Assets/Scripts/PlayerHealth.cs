@@ -8,9 +8,13 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private GameObject deathText;
     [SerializeField]
+    private TextMeshProUGUI scoreText;
+    [SerializeField]
     private AudioClip hurtAudio;
     [SerializeField]
-    private int hp = 3;    
+    private int hp = 3;
+
+    private int totalScore = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +38,11 @@ public class PlayerHealth : MonoBehaviour
             deathText.SetActive(true);
             gameObject.SetActive(false);
         }
+    }
+
+    public void AddScore(int scoreReward)
+    {
+        totalScore += scoreReward;
+        scoreText.text = "Очки: " + totalScore.ToString();
     }
 }

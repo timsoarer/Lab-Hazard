@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Jobs;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
     private bool isMoving = false;
     private Vector2 moveDestination;
 
+    [Header("General Parameters")]
     [SerializeField]
     private float speed = 2.5f; // The speed at which the enemy moves
     [SerializeField]
@@ -22,9 +24,13 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int hp = 1;
     [SerializeField]
+    private int pointsAwarded = 100;
+    [SerializeField]
     private AudioClip hurtAudio;
     [SerializeField]
     private bool doesContactDamage = true;
+    [SerializeField]
+    private GameObject popupPrefab;
 
     void Start()
     {
@@ -59,18 +65,6 @@ public class Enemy : MonoBehaviour
         isMoving = true;
     }
 
-    // Gets the position of this enemy as a Vector2
-    public Vector2 GetPosition2D()
-    {
-        return gameObject.transform.position;
-    }
-
-    // Gets the position of the player
-    public Vector2 GetPlayerPosition()
-    {
-        return player.transform.position;
-    }
-
     // Initializes any additional variables that derived enemy classes may need. Can be overriden.
     public virtual void Init()
     {
@@ -89,6 +83,9 @@ public class Enemy : MonoBehaviour
         AudioSource.PlayClipAtPoint(hurtAudio, new Vector3(transform.position.x, transform.position.y, -7f));
         if (hp <= 0)
         {
+            GameObject popup = Instantiate(popupPrefab);
+            popup.GetComponent<ScorePopup>().SetPopupValue(transform.position, "+" + pointsAwarded.ToString());
+            player.GetComponent<PlayerHealth>().AddScore(pointsAwarded);
             Destroy(gameObject);
         }
     }
@@ -100,5 +97,19 @@ public class Enemy : MonoBehaviour
             player.GetComponent<PlayerHealth>().Damage();
             // ADD CONTACT DAMAGE COOLDOWN, SO THE ZOMBIE CAN'T ATTACK MULTIPLE TIMES IN QUICK SUCCESSION!!!!
         }
+    }
+
+    public bool HasDestination() => isMoving;
+
+    // Gets the position of this enemy as a Vector2
+    public Vector2 GetPosition2D()
+    {
+        return gameObject.transform.position;
+    }
+
+    // Gets the position of the player
+    public Vector2 GetPlayerPosition()
+    {
+        return player.transform.position;
     }
 }
