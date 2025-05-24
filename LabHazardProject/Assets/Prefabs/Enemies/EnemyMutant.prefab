@@ -128,8 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   deadzone: 0.5
-  hp: 5
-  pointsAwarded: 150
+  hp: 2
+  pointsAwarded: 100
   hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
   doesContactDamage: 1
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}

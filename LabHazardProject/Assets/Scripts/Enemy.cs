@@ -25,12 +25,23 @@ public class Enemy : MonoBehaviour
     private int hp = 1;
     [SerializeField]
     private int pointsAwarded = 100;
-    [SerializeField]
-    private AudioClip hurtAudio;
+
+    [Header("Contact Damage")]
     [SerializeField]
     private bool doesContactDamage = true;
     [SerializeField]
+    private int contactDamageValue = 1;
+    [SerializeField]
+    private float contactDamageCooldown = 0.5f;
+    private float contactTimer = 0.0f;
+
+
+    [Header("Audio and Visuals")]
+    [SerializeField]
+    private AudioClip hurtAudio;
+    [SerializeField]
     private GameObject popupPrefab;
+    
 
     void Start()
     {
@@ -43,6 +54,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         UpdateAI();
+        if (doesContactDamage)
+        {
+            contactTimer += Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
@@ -90,12 +105,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionStay2D(Collision2D col)
     {
-        if (doesContactDamage && col.collider.tag == "Player")
+        if (doesContactDamage && contactTimer >= contactDamageCooldown && col.collider.tag == "Player")
         {
-            player.GetComponent<PlayerHealth>().Damage();
-            // ADD CONTACT DAMAGE COOLDOWN, SO THE ZOMBIE CAN'T ATTACK MULTIPLE TIMES IN QUICK SUCCESSION!!!!
+            player.GetComponent<PlayerHealth>().Damage(contactDamageValue);
+            contactTimer = 0f;
         }
     }
 

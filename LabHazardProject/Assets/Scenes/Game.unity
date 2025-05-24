@@ -592,6 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5595220766736786733, guid: f3a487d7a88b21c4c80c4ab51684aaa3, type: 3}
+  fireRate: 0.3
   gunPivot: {fileID: 211573674}
   muzzlePoint: {fileID: 1808380644}
   shootSound: {fileID: 8300000, guid: 6af333e763881234bb48c450555d9c5c, type: 3}
