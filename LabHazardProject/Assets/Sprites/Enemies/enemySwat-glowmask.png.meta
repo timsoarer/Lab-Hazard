@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 321858102159b874b81a217af9a23722
+guid: aab989c5add03d648bbd06b93748d748
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -46,8 +46,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemySwat_0: 165775047
-      enemySwat_1: 1343348429
-      enemySwat_2: -1319599943
-      enemySwat_3: 1931675972
-      enemySwat_4: 496793721
-      enemySwat_5: -1629162973
+      enemySwat-glowmask_0: 165775047
+      enemySwat-glowmask_1: 1343348429
+      enemySwat-glowmask_2: -1319599943
+      enemySwat-glowmask_3: 1931675972
+      enemySwat-glowmask_4: 496793721
+      enemySwat-glowmask_5: -1629162973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

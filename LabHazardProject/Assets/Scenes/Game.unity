@@ -578,7 +578,7 @@ MonoBehaviour:
   deathText: {fileID: 1439722547}
   scoreText: {fileID: 1596362291}
   hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
-  hp: 1
+  hp: 100
 --- !u!114 &158041392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,7 +1454,7 @@ MonoBehaviour:
   - {fileID: 9265974}
   - {fileID: 148175506}
   - {fileID: 247929603}
-  enemyPrefab: {fileID: 640200830840850217, guid: 0b9940e1bc1d068448e7b022508be928, type: 3}
+  enemyPrefab: {fileID: 8451690801561269371, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
   safeRadius: 0
   spawnDelay: 1
 --- !u!1 &702236586
@@ -3857,6 +3857,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6695a7eb93f37b84b85d28309da30fe0, type: 3}
+--- !u!1001 &8675518003657945336
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.192
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746471747402078155, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826344748374096573, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+      propertyPath: m_Name
+      value: EnemySWAT
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3868,3 +3925,4 @@ SceneRoots:
   - {fileID: 12123344}
   - {fileID: 993306647}
   - {fileID: 125761185}
+  - {fileID: 8675518003657945336}

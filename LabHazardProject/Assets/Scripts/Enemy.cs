@@ -107,7 +107,7 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (doesContactDamage && contactTimer >= contactDamageCooldown && col.collider.tag == "Player")
+        if (doesContactDamage && contactTimer >= contactDamageCooldown && col.collider.CompareTag("Player"))
         {
             player.GetComponent<PlayerHealth>().Damage(contactDamageValue);
             contactTimer = 0f;
