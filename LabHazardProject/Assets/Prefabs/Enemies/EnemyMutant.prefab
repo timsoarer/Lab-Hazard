@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3064615869086078842}
   - component: {fileID: 640200830840850217}
   - component: {fileID: 1486843402750413979}
+  - component: {fileID: 883485214965634588}
+  - component: {fileID: 729286867648477166}
   m_Layer: 0
   m_Name: EnemyMutant
   m_TagString: Untagged
@@ -76,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 660917445
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b867c284f6209c4daf01e15a100e324, type: 3}
+  m_Sprite: {fileID: -1629462980, guid: 5b867c284f6209c4daf01e15a100e324, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8125, y: 0.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,8 +132,10 @@ MonoBehaviour:
   deadzone: 0.5
   hp: 2
   pointsAwarded: 100
-  hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
   doesContactDamage: 1
+  contactDamageValue: 1
+  contactDamageCooldown: 0.5
+  hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
   lungeDistance: 2
   lungeDelay: 1
@@ -167,6 +171,40 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051671684, y: 0.25628147}
+  m_Offset: {x: 0, y: 0.25628147}
   serializedVersion: 2
   m_Radius: 0.27178285
+--- !u!95 &883485214965634588
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839847030236278535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfbd8c305fac847468b4d17b8c53c25b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &729286867648477166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839847030236278535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ded3ddd4ad4694e9fb4adadeec86e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadzone: 0.1
