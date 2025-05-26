@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private Transform[] spawnPoints;
     [SerializeField]
-    private Enemy enemyPrefab;
+    private GameObject[] enemyPrefabs;
     [SerializeField]
     private float safeRadius;
     [SerializeField]
@@ -30,7 +30,9 @@ public class EnemySpawner : MonoBehaviour
 
         if (timer >= spawnDelay)
         {
-            Instantiate(enemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Length - 1)].position, Quaternion.identity);
+            Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)],
+                spawnPoints[Random.Range(0, spawnPoints.Length)].position,
+                Quaternion.identity);
             timer = 0f;
         }
     }

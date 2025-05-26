@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 7956296053412663634}
   - component: {fileID: 6349998748358484657}
   - component: {fileID: 8451690801561269371}
+  - component: {fileID: 4315177910917894682}
+  - component: {fileID: 1207518871000586128}
   m_Layer: 0
   m_Name: EnemySWAT
   m_TagString: Untagged
@@ -253,11 +255,50 @@ MonoBehaviour:
   contactDamageCooldown: 0.5
   hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
+  projectilePrefab: {fileID: 5595220766736786733, guid: f3a487d7a88b21c4c80c4ab51684aaa3, type: 3}
+  fireRate: 2
+  muzzlePoint: {fileID: 6484404510403293596}
+  shootSound: {fileID: 8300000, guid: 6af333e763881234bb48c450555d9c5c, type: 3}
   detectionRadius: {fileID: 4434080081600587136}
   playerOptimalRadius: 3
   playerDeadzone: 0.5
   avoidStrength: 1
   updateFrequency: 0.5
+--- !u!95 &4315177910917894682
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826344748374096573}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f5dbdb57f2e7a84787c67e8f35f8dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1207518871000586128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826344748374096573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ded3ddd4ad4694e9fb4adadeec86e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadzone: 0.1
+  hasShootingAnims: 1
 --- !u!1 &5692674669301496027
 GameObject:
   m_ObjectHideFlags: 0

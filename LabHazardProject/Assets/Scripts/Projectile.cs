@@ -78,7 +78,7 @@ public class Projectile : MonoBehaviour
                 OnEnemyHit(ai);
             }
         }
-        else if (!other.CompareTag("Projectile") && !other.CompareTag("AI"))
+        else if (other.CompareTag("SolidObject"))
         {
             OnWallHit();
         }

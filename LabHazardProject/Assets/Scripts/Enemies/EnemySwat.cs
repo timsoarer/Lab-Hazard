@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class EnemySwat : Enemy
 {
-    [Header("SWAT Parameters")]
+    [Header("SWAT Fire Parameters")]
+    [SerializeField]
+    private GameObject projectilePrefab;
+    [SerializeField]
+    private float fireRate;
+    [SerializeField]
+    private Transform muzzlePoint;
+    [SerializeField]
+    private AudioClip shootSound;
+
+    [Header("SWAT Movement Parameters")]
     [SerializeField]
     private EnemyDetectionRadius detectionRadius;
     [SerializeField]
@@ -17,15 +27,30 @@ public class EnemySwat : Enemy
     [SerializeField]
     private float updateFrequency = 0.1f;
 
-    private float timer = 0.0f;
+    private Animator anim;
+    private SpriteAnimator shootAnim;
+    private float moveTimer = 0.0f;
+    private float shootTimer = 0.0f;
+
+    public override void Init()
+    {
+        anim = GetComponent<Animator>();
+        shootAnim = GetComponent<SpriteAnimator>();
+    }
 
     public override void UpdateAI()
     {
-        timer += Time.deltaTime;
-        if (timer >= updateFrequency)
+        moveTimer += Time.deltaTime;
+        shootTimer += Time.deltaTime;
+        if (moveTimer >= updateFrequency)
         {
-            timer = 0.0f;
+            moveTimer = 0.0f;
             SetMoveDestination(CalculateDestination());
+        }
+        if (shootTimer >= fireRate)
+        {
+            shootTimer = 0.0f;
+            Shoot();
         }
     }
 
@@ -57,5 +82,22 @@ public class EnemySwat : Enemy
         }
 
         return GetPosition2D() - enemyAvoidSum * avoidStrength + playerFollowDir;
+    }
+
+    void Shoot()
+    {
+        Vector2 relativePlayerPos = GetPlayerPosition() - GetPosition2D();
+        float angle = Vector2.SignedAngle(Vector2.right, relativePlayerPos);
+
+        GameObject projectileObject = Instantiate(projectilePrefab, muzzlePoint.position, Quaternion.identity);
+        Projectile projectileScript = projectileObject.GetComponent<Projectile>();
+        if (projectileScript == null)
+        {
+            Debug.LogError(gameObject.name + " is trying to fire " + projectilePrefab.name + ", but it has no projectile script attached!");
+        }
+        projectileScript.SetTravelAngle(angle);
+        projectileScript.ChangeProjectileSide(ProjectileSide.Enemy);
+        AudioSource.PlayClipAtPoint(shootSound, transform.position + Vector3.back * 2);
+        shootAnim.ShootAt(relativePlayerPos, 0.2f);
     }
 }

@@ -22,6 +22,8 @@ public class SpriteAnimator : MonoBehaviour
 
     [SerializeField]
     private float deadzone = 0.1f;
+    [SerializeField]
+    private bool hasShootingAnims = false;
 
     private float overrideTimer = 0f;
     private Direction overridenDir;
@@ -39,11 +41,19 @@ public class SpriteAnimator : MonoBehaviour
         if (overrideTimer <= 0f)
         {
             currentDir = GetDirectionFromVector2(rb.velocity);
+            if (hasShootingAnims)
+            {
+                anim.SetBool("Shooting", false);
+            }
         }
         else
         {
             currentDir = overridenDir;
             overrideTimer -= Time.deltaTime;
+            if (hasShootingAnims)
+            {
+                anim.SetBool("Shooting", true);
+            }
         }
         anim.SetInteger("Direction", (int)currentDir);
     }
@@ -79,9 +89,9 @@ public class SpriteAnimator : MonoBehaviour
         }
     }
 
-    public void OverrideDirection(Direction dir, float duration = 1f)
+    public void ShootAt(Vector2 point, float duration = 1f)
     {
-        overridenDir = dir;
+        overridenDir = GetDirectionFromVector2(point);
         overrideTimer = duration;
     }
 }
