@@ -1454,7 +1454,7 @@ MonoBehaviour:
   - {fileID: 9265974}
   - {fileID: 148175506}
   - {fileID: 247929603}
-  enemyPrefab: {fileID: 8451690801561269371, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
+  enemyPrefab: {fileID: 640200830840850217, guid: 0b9940e1bc1d068448e7b022508be928, type: 3}
   safeRadius: 0
   spawnDelay: 1
 --- !u!1 &702236586

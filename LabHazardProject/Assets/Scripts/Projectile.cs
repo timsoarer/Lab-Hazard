@@ -27,11 +27,11 @@ public class Projectile : MonoBehaviour
     private Material enemyMaterial; // The material for when the projectile is owned by the enemy
     [SerializeField]
     private Material neutralMaterial; // The material for when the projectile is neutral
-    
+
     // The tints of light sources for each team
     private Color playerLightColor = new Color32(0, 154, 255, 255);
     private Color enemyLightColor = new Color32(255, 9, 0, 255);
-    private Color neutralLightColor = new Color32(255, 166, 0, 255); 
+    private Color neutralLightColor = new Color32(255, 166, 0, 255);
 
     private Light2D light2d; // The light source of the projectile
     private SpriteRenderer spriteRenderer;
@@ -54,7 +54,7 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Determines whether the object hit is the player, an enemy, or a wall
-        if (interactWithPlayers && other.tag == "Player")
+        if (interactWithPlayers && other.CompareTag("Player"))
         {
             PlayerHealth playerHP = other.gameObject.GetComponent<PlayerHealth>();
             if (playerHP == null)
@@ -66,7 +66,7 @@ public class Projectile : MonoBehaviour
                 OnPlayerHit(playerHP);
             }
         }
-        else if (interactWithEnemies && other.tag == "Enemy")
+        else if (interactWithEnemies && other.CompareTag("Enemy"))
         {
             Enemy ai = other.gameObject.GetComponent<Enemy>();
             if (ai == null)
@@ -78,7 +78,7 @@ public class Projectile : MonoBehaviour
                 OnEnemyHit(ai);
             }
         }
-        else if (other.tag != "Projectile")
+        else if (!other.CompareTag("Projectile") && !other.CompareTag("AI"))
         {
             OnWallHit();
         }

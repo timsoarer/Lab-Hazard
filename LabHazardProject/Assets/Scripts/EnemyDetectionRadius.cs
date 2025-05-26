@@ -25,6 +25,7 @@ public class EnemyDetectionRadius : MonoBehaviour
 
     public List<Transform> GetEntitiesInRadius()
     {
+        entitiesInRadius.RemoveAll(x => !x); // Removes all null values from list
         return entitiesInRadius;
     }
 }
