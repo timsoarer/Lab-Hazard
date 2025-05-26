@@ -1,0 +1,740 @@
+fileFormatVersion: 2
+guid: f37e2d9beea793148a02e7c534c0d352
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bgPropsSet_papers_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 133
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27ce18d1b6cd56489aa4dbb36fe3df4
+      internalID: 372559936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 133
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c2f6cbf2db46c47978d384bf2bb26e
+      internalID: 63430812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 130
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facbc53d6807c9547b25c3a8b9f21e07
+      internalID: -891730171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 130
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbbdbaa34aa26f408a7910eda9df680
+      internalID: 1303186695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_lamp
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 27
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f19b504aa62274cbab33bce7e92ae8
+      internalID: 143822896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_corpse
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 86
+        width: 46
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158d11eb537216b449b063fa32529d35
+      internalID: 1700112719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 115
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd06cee6611bf24a84b47546b837e9e
+      internalID: -1334043776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_6
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 111
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfb8869afe62f24d976b918463a6d96
+      internalID: 2140287903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_7
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 111
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c083dfa582db59f46836bf171df64a9e
+      internalID: -1291843605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_table_tools
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 44
+        width: 104
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03b7618e1976574498aca191d94ac3a
+      internalID: 1097927938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 84
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7becc14ca9385934bb6a1f6942f180a1
+      internalID: -103573302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_papers_9
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 83
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1368b94b8d949a242acc499e6a9a683e
+      internalID: 1620297409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_table_vialsAndPC
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 41
+        width: 71
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cd120431efd94468ec8748506c366c
+      internalID: -775710427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_table_vials
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 41
+        width: 71
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895dd2cf61cea344492d5acf86df559c
+      internalID: -1445784526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_table_vialsRats
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 37
+        width: 71
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a136c5d22f865624580eac308f626f79
+      internalID: 472936473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_34
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 32
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d840cc294ecbb654ebac44c2ab570c2c
+      internalID: -309466671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_PCBroken
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 24
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3b6c37844a35c4b93dcd645779e016
+      internalID: 2002903171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_blood_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 28
+        width: 4
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0c18ffdd73f2d4ebe471d3a1dd1436
+      internalID: -915852501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_blood_5
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 21
+        width: 25
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf95a3179c55ca2419158a2a2e702ce1
+      internalID: -128911295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_38
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 27
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5809c5fe6bade247b5f236be2607d5d
+      internalID: 2066657410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_39
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 7
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b445c9f472950e40831d2a3f3ff5ce8
+      internalID: -1747547493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_blood_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 16
+        width: 9
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c83e4b3c1afd824b8ca302f6673d921
+      internalID: 261258998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_blood_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 19
+        width: 4
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2034d736823fe340896e5f64f357fbc
+      internalID: -1438288080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea4689b68e728b498dbe9b2418b31f4
+      internalID: -181023174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_blood_4
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 5
+        width: 6
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c389761325950545ade5456389863e0
+      internalID: 1728012816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 6
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b0f73dd3f9a184a87b940c2892fb02
+      internalID: 940586353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgPropsSet_47
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 4
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4563c317dad9e3c4f84d10774765abbe
+      internalID: -1809086874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bgPropsSet_11: -1262784208
+      bgPropsSet_13: -967700274
+      bgPropsSet_16: 1088564846
+      bgPropsSet_17: -64311709
+      bgPropsSet_18: 2117727558
+      bgPropsSet_19: 710992766
+      bgPropsSet_20: -1280949076
+      bgPropsSet_23: -1002222221
+      bgPropsSet_26: -781482169
+      bgPropsSet_28: -197138807
+      bgPropsSet_29: 2066951056
+      bgPropsSet_34: -309466671
+      bgPropsSet_38: 2066657410
+      bgPropsSet_39: -1747547493
+      bgPropsSet_4: -716611546
+      bgPropsSet_42: 182937249
+      bgPropsSet_43: -181023174
+      bgPropsSet_45: 291870350
+      bgPropsSet_46: 940586353
+      bgPropsSet_47: -1809086874
+      bgPropsSet_5: 1727220894
+      bgPropsSet_6: 490527322
+      bgPropsSet_7: -1456742215
+      bgPropsSet_8: -2100598501
+      bgPropsSet_9: -347312040
+      bgPropsSet_PCBroken: 2002903171
+      bgPropsSet_blood_1: 261258998
+      bgPropsSet_blood_2: -915852501
+      bgPropsSet_blood_3: -1438288080
+      bgPropsSet_blood_4: 1728012816
+      bgPropsSet_blood_5: -128911295
+      bgPropsSet_corpse: 1700112719
+      bgPropsSet_lamp: 143822896
+      bgPropsSet_papers_1: 372559936
+      bgPropsSet_papers_2: 63430812
+      bgPropsSet_papers_3: -891730171
+      bgPropsSet_papers_4: 1303186695
+      bgPropsSet_papers_5: -1334043776
+      bgPropsSet_papers_6: 2140287903
+      bgPropsSet_papers_7: -1291843605
+      bgPropsSet_papers_8: -103573302
+      bgPropsSet_papers_9: 1620297409
+      bgPropsSet_table_tools: 1097927938
+      bgPropsSet_table_vials: -1445784526
+      bgPropsSet_table_vialsAndPC: -775710427
+      bgPropsSet_table_vialsRats: 472936473
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
