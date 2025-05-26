@@ -3,7 +3,9 @@ guid: 8c2b82639c42cd5438b58b7873697990
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hurtAudio: {instanceID: 0}
+  - popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

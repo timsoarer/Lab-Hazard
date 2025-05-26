@@ -8,11 +8,15 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField]
     private GameObject projectilePrefab;
     [SerializeField]
-    private Transform gunPivot;
+    private float fireRate;
     [SerializeField]
-    private Transform muzzlePoint;
+    private Transform gunPivot; // The parent of the gun object with which the gun rotates
+    [SerializeField]
+    private Transform muzzlePoint; // The point where projectiles spawn
     [SerializeField]
     private AudioClip shootSound;
+
+    private float timer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,17 +27,21 @@ public class PlayerWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Rotates the weapon's pivot toward the mouse cursor.
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 relativePos = cursorPos - (Vector2)gunPivot.position;
         float angle = Vector2.SignedAngle(Vector2.right, relativePos);
         gunPivot.rotation = Quaternion.Euler(0f, 0f, angle);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && timer >= fireRate)
         {
             Shoot();
+            timer = 0f;
         }
+        timer += Time.deltaTime;
     }
 
+    // Creates a projectline "projectilePrefab", sets it to player's side, and fires it in the direction of the weapon
     void Shoot()
     {
         GameObject projectileObject = Instantiate(projectilePrefab, muzzlePoint.position, Quaternion.identity);

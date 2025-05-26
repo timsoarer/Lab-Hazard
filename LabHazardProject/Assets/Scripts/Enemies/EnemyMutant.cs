@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMutant : Enemy
 {
+    [Header("Mutant Parameters")]
     [SerializeField]
     private float lungeDistance;
     [SerializeField]

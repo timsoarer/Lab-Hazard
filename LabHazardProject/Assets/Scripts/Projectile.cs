@@ -22,17 +22,18 @@ public class Projectile : MonoBehaviour
     private bool interactWithEnemies;
 
     [SerializeField]
-    private Material playerMaterial;
+    private Material playerMaterial; // The material for when the projectile is owned by the player
     [SerializeField]
-    private Material enemyMaterial;
+    private Material enemyMaterial; // The material for when the projectile is owned by the enemy
     [SerializeField]
-    private Material neutralMaterial;
-    
+    private Material neutralMaterial; // The material for when the projectile is neutral
+
+    // The tints of light sources for each team
     private Color playerLightColor = new Color32(0, 154, 255, 255);
     private Color enemyLightColor = new Color32(255, 9, 0, 255);
     private Color neutralLightColor = new Color32(255, 166, 0, 255);
 
-    private Light2D light2d;
+    private Light2D light2d; // The light source of the projectile
     private SpriteRenderer spriteRenderer;
     protected Rigidbody2D rb;
     protected float travelAngle = 0f;
@@ -49,10 +50,11 @@ public class Projectile : MonoBehaviour
         Init();
     }
 
-    // Update is called once per frame
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (interactWithPlayers && other.tag == "Player")
+        // Determines whether the object hit is the player, an enemy, or a wall
+        if (interactWithPlayers && other.CompareTag("Player"))
         {
             PlayerHealth playerHP = other.gameObject.GetComponent<PlayerHealth>();
             if (playerHP == null)
@@ -64,7 +66,7 @@ public class Projectile : MonoBehaviour
                 OnPlayerHit(playerHP);
             }
         }
-        else if (interactWithEnemies && other.tag == "Enemy")
+        else if (interactWithEnemies && other.CompareTag("Enemy"))
         {
             Enemy ai = other.gameObject.GetComponent<Enemy>();
             if (ai == null)
@@ -76,7 +78,7 @@ public class Projectile : MonoBehaviour
                 OnEnemyHit(ai);
             }
         }
-        else if (other.tag != "Projectile")
+        else if (other.CompareTag("SolidObject"))
         {
             OnWallHit();
         }
@@ -113,11 +115,13 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    // Returns the current travel angle
     public float GetTravelAngle()
     {
         return travelAngle;
     }
 
+    // Takes the angle (in degrees) and changes the travel direction to that angle
     public void SetTravelAngle(float newAngle)
     {
         travelAngle = newAngle;
@@ -156,6 +160,7 @@ public class Projectile : MonoBehaviour
 
     }
 
+    // Turns an angle (in degrees) into a normalized Vector2 pointing at that angle
     private Vector2 AngleToDirection(float angle)
     {
         return new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));

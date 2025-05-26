@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 public class SpriteAnimator : MonoBehaviour
 {
-    private enum Direction
+    public enum Direction
     {
         Front,
         Back,
@@ -21,7 +22,12 @@ public class SpriteAnimator : MonoBehaviour
 
     [SerializeField]
     private float deadzone = 0.1f;
-    
+    [SerializeField]
+    private bool hasShootingAnims = false;
+
+    private float overrideTimer = 0f;
+    private Direction overridenDir;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,20 +38,36 @@ public class SpriteAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentDir = GetDirectionFromVelocity();
+        if (overrideTimer <= 0f)
+        {
+            currentDir = GetDirectionFromVector2(rb.velocity);
+            if (hasShootingAnims)
+            {
+                anim.SetBool("Shooting", false);
+            }
+        }
+        else
+        {
+            currentDir = overridenDir;
+            overrideTimer -= Time.deltaTime;
+            if (hasShootingAnims)
+            {
+                anim.SetBool("Shooting", true);
+            }
+        }
         anim.SetInteger("Direction", (int)currentDir);
     }
 
-    Direction GetDirectionFromVelocity()
+    public Direction GetDirectionFromVector2(Vector2 input)
     {
-        if (rb.velocity.magnitude < deadzone)
+        if (input.magnitude < deadzone)
         {
             return currentDir;
         }
 
-        if (Mathf.Abs(rb.velocity.x) > Mathf.Abs(rb.velocity.y))
+        if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
         {
-            if (rb.velocity.x > 0)
+            if (input.x > 0)
             {
                 return Direction.Right;
             }
@@ -56,7 +78,7 @@ public class SpriteAnimator : MonoBehaviour
         }
         else
         {
-            if (rb.velocity.y > 0)
+            if (input.y > 0)
             {
                 return Direction.Back;
             }
@@ -65,5 +87,11 @@ public class SpriteAnimator : MonoBehaviour
                 return Direction.Front;
             }
         }
+    }
+
+    public void ShootAt(Vector2 point, float duration = 1f)
+    {
+        overridenDir = GetDirectionFromVector2(point);
+        overrideTimer = duration;
     }
 }
