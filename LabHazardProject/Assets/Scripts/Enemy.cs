@@ -125,6 +125,7 @@ public class Enemy : MonoBehaviour
     // Gets the position of the player
     public Vector2 GetPlayerPosition()
     {
+        if (!player) return new Vector2(Random.Range(-100, 100), Random.Range(-100, 100)); // Randomly wander if player is dead
         return player.transform.position;
     }
 }

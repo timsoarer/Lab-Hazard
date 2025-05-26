@@ -56,5 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
     "dotnet.defaultSolution": "LabHazardProject.sln"
 }
