@@ -24,6 +24,8 @@ public class SpriteAnimator : MonoBehaviour
     private float deadzone = 0.1f;
     [SerializeField]
     private bool hasShootingAnims = false;
+    [SerializeField]
+    private bool hasWalkingAnims = false;
 
     private float overrideTimer = 0f;
     private Direction overridenDir;
@@ -55,6 +57,19 @@ public class SpriteAnimator : MonoBehaviour
                 anim.SetBool("Shooting", true);
             }
         }
+
+        if (hasWalkingAnims)
+        {
+            if (rb.velocity.magnitude <= deadzone)
+            {
+                anim.SetBool("Walking", false);
+            }
+            else
+            {
+                anim.SetBool("Walking", true);
+            }
+        }
+
         anim.SetInteger("Direction", (int)currentDir);
     }
 

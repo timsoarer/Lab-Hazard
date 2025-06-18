@@ -97,7 +97,7 @@ public class EnemySwat : Enemy
         }
         projectileScript.SetTravelAngle(angle);
         projectileScript.ChangeProjectileSide(ProjectileSide.Enemy);
-        AudioSource.PlayClipAtPoint(shootSound, transform.position + Vector3.back * 2);
+        AudioSource.PlayClipAtPoint(shootSound, transform.position);
         shootAnim.ShootAt(relativePlayerPos, 0.2f);
     }
 }
