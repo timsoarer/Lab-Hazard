@@ -137,10 +137,19 @@ MonoBehaviour:
   contactDamageValue: 1
   contactDamageCooldown: 0.5
   hurtSounds:
-  - {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
+  - {fileID: 8300000, guid: 3f06e452e00235240bfcc9777bb9af96, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: deae2a5fcc666bd4f9d9c6f626721b22, type: 3}
+  - {fileID: 8300000, guid: 1ba572e2f3933164ead6020f5decf652, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
   lungeDistance: 2
   lungeDelay: 1
+  groanSounds:
+  - {fileID: 8300000, guid: 5839f5d7a8cfd6146b65b28a3f8d62d1, type: 3}
+  - {fileID: 8300000, guid: ac9f7bdc3f06e394eb64017aa8b69451, type: 3}
+  - {fileID: 8300000, guid: e7cbd2c6c8dd9484b948d31884df5b94, type: 3}
+  groanLowDelay: 2
+  groanHighDelay: 5
 --- !u!58 &1486843402750413979
 CircleCollider2D:
   m_ObjectHideFlags: 0

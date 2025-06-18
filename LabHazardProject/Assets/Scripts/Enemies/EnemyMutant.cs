@@ -9,13 +9,22 @@ public class EnemyMutant : Enemy
     private float lungeDistance;
     [SerializeField]
     private float lungeDelay;
+    [SerializeField]
+    private AudioClip[] groanSounds;
+    [SerializeField]
+    private float groanLowDelay = 2f;
+    [SerializeField]
+    private float groanHighDelay = 5f;
+    private float currentGroanDelay = 0f;
 
     private float timer = 0.0f;
+    private float groanTimer = 0.0f;
 
     // Update is called once per frame
     public override void UpdateAI()
     {
         timer += Time.deltaTime;
+        groanTimer += Time.deltaTime;
         if (timer >= lungeDelay)
         {
             timer = 0.0f;
@@ -29,6 +38,12 @@ public class EnemyMutant : Enemy
                 destination = GetPlayerPosition();
             }
             SetMoveDestination(destination);
+        }
+        if (groanTimer >= currentGroanDelay)
+        {
+            groanTimer = 0.0f;
+            randSoundPLayer.PlayRandomSoundAtPoint(transform.position, groanSounds);
+            currentGroanDelay = Random.Range(groanLowDelay, groanHighDelay);
         }
     }
 }

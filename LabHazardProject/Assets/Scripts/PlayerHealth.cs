@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     private int hp = 3;
     private RandomSoundPlayer randSoundPlayer;
 
+    [SerializeField]
+    private AudioSource musicPlayer;
+
     private int totalScore = 0;
 
     // Start is called before the first frame update
@@ -33,7 +36,6 @@ public class PlayerHealth : MonoBehaviour
     {
         hp -= damageValue;
         randSoundPlayer.PlayRandomSound(hurtSounds);
-        Debug.Log("Playing audio!");
         if (hp <= 0)
         {
             deathText.SetActive(true);

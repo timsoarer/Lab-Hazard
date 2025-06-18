@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private AudioClip[] hurtSounds;
     [SerializeField]
+    private AudioClip[] deathSounds;
+    [SerializeField]
     private GameObject popupPrefab;
     protected RandomSoundPlayer randSoundPLayer;
     
@@ -97,13 +99,17 @@ public class Enemy : MonoBehaviour
     public void Damage(int damageValue = 1)
     {
         hp -= damageValue;
-        randSoundPLayer.PlayRandomSoundAtPoint(transform.position, hurtSounds);
         if (hp <= 0)
         {
+            randSoundPLayer.PlayRandomSoundAtPoint(transform.position, deathSounds);
             GameObject popup = Instantiate(popupPrefab);
             popup.GetComponent<ScorePopup>().SetPopupValue(transform.position, "+" + pointsAwarded.ToString());
             player.GetComponent<PlayerHealth>().AddScore(pointsAwarded);
             Destroy(gameObject);
+        }
+        else
+        {
+            randSoundPLayer.PlayRandomSoundAtPoint(transform.position, hurtSounds);
         }
     }
 

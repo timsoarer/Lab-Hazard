@@ -256,6 +256,8 @@ MonoBehaviour:
   contactDamageCooldown: 0.5
   hurtSounds:
   - {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: d253d4fe80c3975438d1c53ad85b9918, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
   projectilePrefab: {fileID: 5595220766736786733, guid: f3a487d7a88b21c4c80c4ab51684aaa3, type: 3}
   fireRate: 2
