@@ -12,7 +12,7 @@ public class EnemySwat : Enemy
     [SerializeField]
     private Transform muzzlePoint;
     [SerializeField]
-    private AudioClip shootSound;
+    private AudioClip[] shootSounds;
 
     [Header("SWAT Movement Parameters")]
     [SerializeField]
@@ -97,7 +97,7 @@ public class EnemySwat : Enemy
         }
         projectileScript.SetTravelAngle(angle);
         projectileScript.ChangeProjectileSide(ProjectileSide.Enemy);
-        AudioSource.PlayClipAtPoint(shootSound, transform.position);
+        randSoundPLayer.PlayRandomSoundAtPoint(transform.position, shootSounds);
         shootAnim.ShootAt(relativePlayerPos, 0.2f);
     }
 }

@@ -54,6 +54,6 @@ public class PlayerWeapon : MonoBehaviour
         }
         projectileScript.SetTravelAngle(gunPivot.rotation.eulerAngles.z);
         projectileScript.ChangeProjectileSide(ProjectileSide.Player);
-        randSoundPlayer.PlayRandomSoundAtPoint(transform.position, shootSounds);
+        randSoundPlayer.PlayRandomSound(shootSounds);
     }
 }

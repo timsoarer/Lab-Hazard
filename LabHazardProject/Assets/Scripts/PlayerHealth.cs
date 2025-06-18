@@ -10,16 +10,17 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText;
     [SerializeField]
-    private AudioClip hurtAudio;
+    private AudioClip[] hurtSounds;
     [SerializeField]
     private int hp = 3;
+    private RandomSoundPlayer randSoundPlayer;
 
     private int totalScore = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        randSoundPlayer = GetComponent<RandomSoundPlayer>();
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(int damageValue = 1)
     {
         hp -= damageValue;
-        AudioSource.PlayClipAtPoint(hurtAudio, Camera.main.transform.position + Vector3.forward*3);
+        randSoundPlayer.PlayRandomSound(hurtSounds);
         Debug.Log("Playing audio!");
         if (hp <= 0)
         {

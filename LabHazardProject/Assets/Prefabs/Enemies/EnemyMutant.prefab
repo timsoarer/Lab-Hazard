@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1486843402750413979}
   - component: {fileID: 883485214965634588}
   - component: {fileID: 729286867648477166}
+  - component: {fileID: 7173641583186884161}
   m_Layer: 0
   m_Name: EnemyMutant
   m_TagString: Untagged
@@ -135,7 +136,8 @@ MonoBehaviour:
   doesContactDamage: 1
   contactDamageValue: 1
   contactDamageCooldown: 0.5
-  hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
   lungeDistance: 2
   lungeDelay: 1
@@ -208,3 +210,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadzone: 0.1
+  hasShootingAnims: 0
+  hasWalkingAnims: 0
+--- !u!114 &7173641583186884161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839847030236278535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9caa88a3a47ddc40a99d9f0e4c5c4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionlessPrefab: {fileID: -186604305223590389, guid: 894ea7ddf3c135a4d84ed6fc7a72e6ec, type: 3}

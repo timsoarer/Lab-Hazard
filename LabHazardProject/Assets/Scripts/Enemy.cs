@@ -38,9 +38,10 @@ public class Enemy : MonoBehaviour
 
     [Header("Audio and Visuals")]
     [SerializeField]
-    private AudioClip hurtAudio;
+    private AudioClip[] hurtSounds;
     [SerializeField]
     private GameObject popupPrefab;
+    protected RandomSoundPlayer randSoundPLayer;
     
 
     void Start()
@@ -48,6 +49,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         gameObject.tag = "Enemy";
+        randSoundPLayer = GetComponent<RandomSoundPlayer>();
         Init();
     }
 
@@ -95,7 +97,7 @@ public class Enemy : MonoBehaviour
     public void Damage(int damageValue = 1)
     {
         hp -= damageValue;
-        AudioSource.PlayClipAtPoint(hurtAudio, new Vector3(transform.position.x, transform.position.y, -7f));
+        randSoundPLayer.PlayRandomSoundAtPoint(transform.position, hurtSounds);
         if (hp <= 0)
         {
             GameObject popup = Instantiate(popupPrefab);
