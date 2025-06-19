@@ -10,31 +10,34 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText;
     [SerializeField]
+    private TextMeshProUGUI healthText;
+    [SerializeField]
     private AudioClip[] hurtSounds;
     [SerializeField]
-    private int hp = 3;
+    private int maxHp = 3;
+    private int hp;
     private RandomSoundPlayer randSoundPlayer;
-
-    [SerializeField]
-    private AudioSource musicPlayer;
 
     private int totalScore = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        hp = maxHp;
+        PrintHealth();
         randSoundPlayer = GetComponent<RandomSoundPlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Damage(int damageValue = 1)
     {
         hp -= damageValue;
+        PrintHealth();
         randSoundPlayer.PlayRandomSound(hurtSounds);
         if (hp <= 0)
         {
@@ -47,5 +50,10 @@ public class PlayerHealth : MonoBehaviour
     {
         totalScore += scoreReward;
         scoreText.text = "Очки: " + totalScore.ToString();
+    }
+
+    private void PrintHealth()
+    {
+        healthText.text = "Здоровье: [" + new string('|', hp) + new string ('.', maxHp - hp) + ']';
     }
 }

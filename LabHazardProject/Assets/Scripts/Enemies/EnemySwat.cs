@@ -47,7 +47,7 @@ public class EnemySwat : Enemy
             moveTimer = 0.0f;
             SetMoveDestination(CalculateDestination());
         }
-        if (shootTimer >= fireRate)
+        if (shootTimer >= fireRate && PlayerIsAlive())
         {
             shootTimer = 0.0f;
             Shoot();

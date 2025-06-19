@@ -255,9 +255,12 @@ MonoBehaviour:
   contactDamageValue: 1
   contactDamageCooldown: 0.5
   hurtSounds:
-  - {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
+  - {fileID: 8300000, guid: a0a8d2d557a33ab41bdb994d29fd1af3, type: 3}
+  - {fileID: 8300000, guid: e33057f534e2ed8429e4461a0f754c6b, type: 3}
+  - {fileID: 8300000, guid: 4989b9c502e025145ae887aa932ae16d, type: 3}
   deathSounds:
-  - {fileID: 8300000, guid: d253d4fe80c3975438d1c53ad85b9918, type: 3}
+  - {fileID: 8300000, guid: 2ca236ccbb8371f419adbdb7189c6285, type: 3}
+  - {fileID: 8300000, guid: aa131ac475224074fa7b54adc7e72b22, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
   projectilePrefab: {fileID: 5595220766736786733, guid: f3a487d7a88b21c4c80c4ab51684aaa3, type: 3}
   fireRate: 2

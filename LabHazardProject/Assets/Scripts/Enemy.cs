@@ -123,6 +123,7 @@ public class Enemy : MonoBehaviour
     }
 
     public bool HasDestination() => isMoving;
+    public bool PlayerIsAlive() => player && player.activeSelf;
 
     // Gets the position of this enemy as a Vector2
     public Vector2 GetPosition2D()
