@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(RandomSoundPlayer))]
 public class PlayerWeapon : MonoBehaviour
 {
     [SerializeField]
@@ -14,14 +15,15 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField]
     private Transform muzzlePoint; // The point where projectiles spawn
     [SerializeField]
-    private AudioClip shootSound;
+    private AudioClip[] shootSounds;
+    private RandomSoundPlayer randSoundPlayer;
 
     private float timer = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        randSoundPlayer = GetComponent<RandomSoundPlayer>();
     }
 
     // Update is called once per frame
@@ -52,6 +54,6 @@ public class PlayerWeapon : MonoBehaviour
         }
         projectileScript.SetTravelAngle(gunPivot.rotation.eulerAngles.z);
         projectileScript.ChangeProjectileSide(ProjectileSide.Player);
-        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position + Vector3.forward*3);
+        randSoundPlayer.PlayRandomSound(shootSounds, 0.6f);
     }
 }

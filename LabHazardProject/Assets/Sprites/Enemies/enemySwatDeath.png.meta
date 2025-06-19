@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: enemySwatDeath_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 37
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcadd54b274d6794c9675a0b7eb9b572
+      internalID: 1325140096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemySwatDeath_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 5
+        width: 36
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6184943781b457479e054f917570de5
+      internalID: -1020897713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemySwatDeath_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 5
+        width: 54
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7324c7213b514489fdb7f6f7f55465
+      internalID: -1443614623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemySwatDeath_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 7
+        width: 60
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3818531cbef06cc4dbc3fe5751efc337
+      internalID: 1715160568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemySwatDeath_4
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 6
+        width: 85
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08e8cde791dbfc48b251b1a2fda57c6
+      internalID: 1232922215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +224,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      enemySwatDeath_0: 1325140096
+      enemySwatDeath_1: -1020897713
+      enemySwatDeath_2: -1443614623
+      enemySwatDeath_3: 1715160568
+      enemySwatDeath_4: 1232922215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1486843402750413979}
   - component: {fileID: 883485214965634588}
   - component: {fileID: 729286867648477166}
+  - component: {fileID: 7173641583186884161}
   m_Layer: 0
   m_Name: EnemyMutant
   m_TagString: Untagged
@@ -135,10 +136,21 @@ MonoBehaviour:
   doesContactDamage: 1
   contactDamageValue: 1
   contactDamageCooldown: 0.5
-  hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: 3f06e452e00235240bfcc9777bb9af96, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: deae2a5fcc666bd4f9d9c6f626721b22, type: 3}
+  - {fileID: 8300000, guid: 1ba572e2f3933164ead6020f5decf652, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
+  deathEffect: {fileID: 5797793116802635934, guid: 9646b5a2141db06408f622a09ec44b3b, type: 3}
   lungeDistance: 2
   lungeDelay: 1
+  groanSounds:
+  - {fileID: 8300000, guid: 5839f5d7a8cfd6146b65b28a3f8d62d1, type: 3}
+  - {fileID: 8300000, guid: ac9f7bdc3f06e394eb64017aa8b69451, type: 3}
+  - {fileID: 8300000, guid: e7cbd2c6c8dd9484b948d31884df5b94, type: 3}
+  groanLowDelay: 2
+  groanHighDelay: 5
 --- !u!58 &1486843402750413979
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -208,3 +220,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadzone: 0.1
+  hasShootingAnims: 0
+  hasWalkingAnims: 0
+--- !u!114 &7173641583186884161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839847030236278535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9caa88a3a47ddc40a99d9f0e4c5c4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionlessPrefab: {fileID: -186604305223590389, guid: 894ea7ddf3c135a4d84ed6fc7a72e6ec, type: 3}

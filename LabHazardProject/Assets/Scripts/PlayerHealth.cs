@@ -6,36 +6,61 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    private GameObject deathText;
+    private GameObject deathScreen;
     [SerializeField]
     private TextMeshProUGUI scoreText;
     [SerializeField]
-    private AudioClip hurtAudio;
+    private TextMeshProUGUI finalScoreText;
     [SerializeField]
-    private int hp = 3;
+    private TextMeshProUGUI healthText;
+    [SerializeField]
+    private AudioClip[] hurtSounds;
+    [SerializeField]
+    private int maxHp = 3;
+    [SerializeField]
+    private float invTime = 1f;
+    private float invTimer = 0f;
+    private int hp;
+    private RandomSoundPlayer randSoundPlayer;
+    private SpriteRenderer spriteRenderer;
 
     private int totalScore = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hp = maxHp;
+        PrintHealth();
+        randSoundPlayer = GetComponent<RandomSoundPlayer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (invTimer >= invTime)
+        {
+            spriteRenderer.color = Color.white;
+        }
+        else
+        {
+            invTimer += Time.deltaTime;
+            spriteRenderer.color = new Color(1f, 1f, 1f, 0.8f);
+        }
     }
 
     public void Damage(int damageValue = 1)
     {
+        if (invTimer < invTime) return;
+
         hp -= damageValue;
-        AudioSource.PlayClipAtPoint(hurtAudio, Camera.main.transform.position + Vector3.forward*3);
-        Debug.Log("Playing audio!");
+        invTimer = 0f;
+        PrintHealth();
+        randSoundPlayer.PlayRandomSound(hurtSounds);
         if (hp <= 0)
         {
-            deathText.SetActive(true);
+            deathScreen.SetActive(true);
+            finalScoreText.text = "Счёт: " + totalScore.ToString();
             gameObject.SetActive(false);
         }
     }
@@ -44,5 +69,10 @@ public class PlayerHealth : MonoBehaviour
     {
         totalScore += scoreReward;
         scoreText.text = "Очки: " + totalScore.ToString();
+    }
+
+    private void PrintHealth()
+    {
+        healthText.text = "Здоровье: [" + new string('|', hp) + new string ('.', maxHp - hp) + ']';
     }
 }

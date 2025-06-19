@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8451690801561269371}
   - component: {fileID: 4315177910917894682}
   - component: {fileID: 1207518871000586128}
+  - component: {fileID: 7550967061276411747}
   m_Layer: 0
   m_Name: EnemySWAT
   m_TagString: Untagged
@@ -253,12 +254,20 @@ MonoBehaviour:
   doesContactDamage: 0
   contactDamageValue: 1
   contactDamageCooldown: 0.5
-  hurtAudio: {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: a0a8d2d557a33ab41bdb994d29fd1af3, type: 3}
+  - {fileID: 8300000, guid: e33057f534e2ed8429e4461a0f754c6b, type: 3}
+  - {fileID: 8300000, guid: 4989b9c502e025145ae887aa932ae16d, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: 2ca236ccbb8371f419adbdb7189c6285, type: 3}
+  - {fileID: 8300000, guid: aa131ac475224074fa7b54adc7e72b22, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
+  deathEffect: {fileID: 9164795770241930965, guid: 5b2ec16ae29108b49b7b3b3cd7337e6a, type: 3}
   projectilePrefab: {fileID: 5595220766736786733, guid: f3a487d7a88b21c4c80c4ab51684aaa3, type: 3}
   fireRate: 2
   muzzlePoint: {fileID: 6484404510403293596}
-  shootSound: {fileID: 8300000, guid: 6af333e763881234bb48c450555d9c5c, type: 3}
+  shootSounds:
+  - {fileID: 8300000, guid: 6af333e763881234bb48c450555d9c5c, type: 3}
   detectionRadius: {fileID: 4434080081600587136}
   playerOptimalRadius: 3
   playerDeadzone: 0.5
@@ -299,6 +308,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadzone: 0.1
   hasShootingAnims: 1
+  hasWalkingAnims: 0
+--- !u!114 &7550967061276411747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826344748374096573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9caa88a3a47ddc40a99d9f0e4c5c4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionlessPrefab: {fileID: -186604305223590389, guid: 894ea7ddf3c135a4d84ed6fc7a72e6ec, type: 3}
 --- !u!1 &5692674669301496027
 GameObject:
   m_ObjectHideFlags: 0
