@@ -6,9 +6,11 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    private GameObject deathText;
+    private GameObject deathScreen;
     [SerializeField]
     private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI finalScoreText;
     [SerializeField]
     private TextMeshProUGUI healthText;
     [SerializeField]
@@ -41,7 +43,8 @@ public class PlayerHealth : MonoBehaviour
         randSoundPlayer.PlayRandomSound(hurtSounds);
         if (hp <= 0)
         {
-            deathText.SetActive(true);
+            deathScreen.SetActive(true);
+            finalScoreText.text = "Счёт: " + totalScore.ToString();
             gameObject.SetActive(false);
         }
     }

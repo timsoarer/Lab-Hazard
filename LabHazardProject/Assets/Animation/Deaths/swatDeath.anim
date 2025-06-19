@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mutantDeath
+  m_Name: swatDeath
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -136,6 +136,15 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      - serializedVersion: 3
+        time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -148,9 +157,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -969062646, guid: 5b867c284f6209c4daf01e15a100e324, type: 3}
+      value: {fileID: 1715160568, guid: 231455ecfa1e745409ef9c5f4581acbb, type: 3}
     - time: 0.33333334
-      value: {fileID: -893003823, guid: 5b867c284f6209c4daf01e15a100e324, type: 3}
+      value: {fileID: 1232922215, guid: 231455ecfa1e745409ef9c5f4581acbb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -191,14 +200,14 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -969062646, guid: 5b867c284f6209c4daf01e15a100e324, type: 3}
-    - {fileID: -893003823, guid: 5b867c284f6209c4daf01e15a100e324, type: 3}
+    - {fileID: 1715160568, guid: 231455ecfa1e745409ef9c5f4581acbb, type: 3}
+    - {fileID: 1232922215, guid: 231455ecfa1e745409ef9c5f4581acbb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1666666
+    m_StopTime: 2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -445,6 +454,15 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 1.1666666
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2
         value: 0
         inSlope: Infinity
         outSlope: Infinity

@@ -44,6 +44,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject popupPrefab;
     protected RandomSoundPlayer randSoundPLayer;
+    [SerializeField]
+    private GameObject deathEffect;
     
 
     void Start()
@@ -105,6 +107,11 @@ public class Enemy : MonoBehaviour
             GameObject popup = Instantiate(popupPrefab);
             popup.GetComponent<ScorePopup>().SetPopupValue(transform.position, "+" + pointsAwarded.ToString());
             player.GetComponent<PlayerHealth>().AddScore(pointsAwarded);
+
+            GameObject death = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            // Randomizes the orientation of the death animation by setting the X scale to either -1 or 1
+            death.transform.localScale = new Vector3((Random.Range(0, 2) - 0.5f) * 2, 1f, 1f);
+
             Destroy(gameObject);
         }
         else

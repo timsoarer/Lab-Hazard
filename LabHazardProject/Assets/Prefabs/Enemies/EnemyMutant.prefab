@@ -142,6 +142,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: deae2a5fcc666bd4f9d9c6f626721b22, type: 3}
   - {fileID: 8300000, guid: 1ba572e2f3933164ead6020f5decf652, type: 3}
   popupPrefab: {fileID: 6316302723645267765, guid: b09cdc10807a43f47bd555052a38a6ff, type: 3}
+  deathEffect: {fileID: 5797793116802635934, guid: 9646b5a2141db06408f622a09ec44b3b, type: 3}
   lungeDistance: 2
   lungeDelay: 1
   groanSounds:
