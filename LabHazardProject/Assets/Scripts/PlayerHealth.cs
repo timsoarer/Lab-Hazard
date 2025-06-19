@@ -17,8 +17,12 @@ public class PlayerHealth : MonoBehaviour
     private AudioClip[] hurtSounds;
     [SerializeField]
     private int maxHp = 3;
+    [SerializeField]
+    private float invTime = 1f;
+    private float invTimer = 0f;
     private int hp;
     private RandomSoundPlayer randSoundPlayer;
+    private SpriteRenderer spriteRenderer;
 
     private int totalScore = 0;
 
@@ -28,17 +32,29 @@ public class PlayerHealth : MonoBehaviour
         hp = maxHp;
         PrintHealth();
         randSoundPlayer = GetComponent<RandomSoundPlayer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (invTimer >= invTime)
+        {
+            spriteRenderer.color = Color.white;
+        }
+        else
+        {
+            invTimer += Time.deltaTime;
+            spriteRenderer.color = new Color(1f, 1f, 1f, 0.8f);
+        }
     }
 
     public void Damage(int damageValue = 1)
     {
+        if (invTimer < invTime) return;
+
         hp -= damageValue;
+        invTimer = 0f;
         PrintHealth();
         randSoundPlayer.PlayRandomSound(hurtSounds);
         if (hp <= 0)

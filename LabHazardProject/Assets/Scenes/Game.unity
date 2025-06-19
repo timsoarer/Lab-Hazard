@@ -788,6 +788,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d31aaeb74fc8178409f481d8824c9559, type: 3}
   - {fileID: 8300000, guid: d253d4fe80c3975438d1c53ad85b9918, type: 3}
   maxHp: 3
+  invTime: 2
 --- !u!114 &158041392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,7 +2194,8 @@ MonoBehaviour:
   - {fileID: 2839847030236278535, guid: 0b9940e1bc1d068448e7b022508be928, type: 3}
   - {fileID: 2826344748374096573, guid: eca2ba9f4c8ba8145b5c678a59bdb9b4, type: 3}
   safeRadius: 0
-  spawnDelay: 2
+  startSpawnDelay: 1.5
+  spawnFreqMultiplier: 0.99
 --- !u!1 &676962435
 GameObject:
   m_ObjectHideFlags: 0

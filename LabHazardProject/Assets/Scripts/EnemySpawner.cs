@@ -11,7 +11,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float safeRadius;
     [SerializeField]
-    private float spawnDelay = 1f;
+    private float startSpawnDelay = 1.5f;
+    [SerializeField]
+    private float spawnFreqMultiplier = 0.99f;
 
     private float timer = 0.0f;
 
@@ -30,12 +32,13 @@ public class EnemySpawner : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer >= spawnDelay)
+            if (timer >= startSpawnDelay)
             {
                 Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)],
                     spawnPoints[Random.Range(0, spawnPoints.Length)].position,
                     Quaternion.identity);
                 timer = 0f;
+                startSpawnDelay *= spawnFreqMultiplier;
             }
         }
     }
