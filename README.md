@@ -1,2 +1,5 @@
-A simple arcade bullet hell shooter inspired by games such as Enter the Gungeon.
-made by "nuggets?" as part of an UrFU university project
+Простой аркадный шутер в стиле bullet hell, вдохновлённый играми Enter the Gungeon.
+Сделан командой "nuggets?" как часть универститетской проектной деятельности УрФУ.
+
+В качестве фоновой музыки используется royalty free треки в свободном доступе:
+- ParagonX9 - Infiltration
